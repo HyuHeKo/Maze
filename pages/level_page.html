@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maze-level</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/level.js"></script>
+</head>
+<body>
+    <audio id="background-music" loop>
+		<source src="../media/backgroung_music.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<div class="level">
+		<div class="level-row">
+			<div class="keyboard" id="keyboard"></div>
+		</div>
+		<div class="level-row level-row-control">
+			<div class="level-column level-column-control">
+				<div class="button level-control-button" onclick="redirectToLevels()">
+					<h2 class="level-control-text">lvl</h2>
+				</div>
+				<div class="button level-control-button" onclick="redirectToMainPage()">
+					<h2 class="level-control-text">Menu</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="level-row">
+			<div class="level-column">
+				<div class="modal-container" id="modal">
+					<div class="modal-content window">
+						<span class="close" onclick="closeModal()">&times;</span>
+						<h1 class="modal-text">Level complete!</h1>
+						<div class="button modal-button" onclick="redirectToLevels()">
+							<div class="modal-button-text">Levels</div>
+						</div>
+						<div class="button modal-button" onclick="redirectToMainPage()">
+							<div class="modal-button-text">Menu</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="level-row level-row-maze">
+			<div class="level-column">
+				<div id="player"></div>
+				<div class="maze" id="maze">
+			</div>
+		</div>
+	</div>
+
+    <script src="../js/code.js"></script>
+</body>
+</html>

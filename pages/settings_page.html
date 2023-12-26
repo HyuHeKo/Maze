@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maze-settings</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <audio id="background-music" loop>
+		<source src="../media/backgroung_music.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+    <div class="settings">
+        <h1 class="header-text" id="settings-header-text">Settings</h1>
+        <div class="window settings-window">
+            <div class="settings-row-parameters">
+                <div class="column settings-column">
+                    <div class="settings-text">
+                        Music
+                    </div>
+                </div>
+                <div class="column settings-column">
+                    <div class="button settings-button music-status-button" onclick="changeStateMusic()">
+                        <h2 class="settings-text music-text">On</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-row-parameters">
+                <div class="column settings-column">
+                    <div class="settings-text">
+                        Volume
+                    </div>
+                </div>
+                <div class="column settings-column">
+                    <input type="range" id="volume-control" min="0" max="1" step="0.05" value="0.05" oninput="changeVolume()"/>
+                </div> 
+            </div>
+            
+            <div class="settings-row-back">
+                <div class="button settings-button" onclick="redirectToMainPage()">
+                    <h2 class="settings-text">Back</h2>
+                </div>
+            </div>
+		</div>
+	</div>
+
+    <script src="../js/code.js"></script>
+</body>
+</html>
