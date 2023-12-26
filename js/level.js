@@ -139,10 +139,15 @@ window.addEventListener('load', function() {
             
             var imgKeyboard = document.createElement("img");
             imgKeyboard.src = '../image/keyboard.png';
-            imgKeyboard.style.height = "150px"
+            imgKeyboard.style.height = "150px";
             var keyboard = document.getElementById('keyboard');
+            var guide = document.getElementById('guide');
             keyboard.appendChild(imgKeyboard);
-            keyboard.style.marginTop = "-170px"
+            keyboard.style.marginTop = "-170px";
+            guide.style.marginTop = "-120px";
+            guide.style.fontSize = "28px";
+            guide.style.fontStyle = "normal";
+            guide.style.color = "#137a74"
         }
         else if (maze === '2') {
             const mazeMatrix = [
