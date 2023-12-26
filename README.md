@@ -1,1 +1,1 @@
-# Maze
+# Maze/index.html
