@@ -101,6 +101,7 @@ function redirectTo16Level() {
 }
 
 window.addEventListener('load', function() {
+    var eyeless = document.getElementById('eyeless');
     const maze = localStorage.getItem('maze');
     const mazeContainer = document.getElementById('maze');
 
@@ -134,7 +135,7 @@ window.addEventListener('load', function() {
             mazeContainer.style.gridTemplateColumns = 'repeat(10, 50px)';
     
             console.log(localStorage.getItem('currentLvl'));
-            createMaze(mazeMatrix, '5px', '95px');
+            createMaze(mazeMatrix, '5px', '95px', '-1210px', '-710px');
 
             
             var imgKeyboard = document.createElement("img");
@@ -172,7 +173,7 @@ window.addEventListener('load', function() {
             mazeContainer.style.gridTemplateRows = 'repeat(12, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(12, 50px)';
             console.log(localStorage.getItem('currentLvl'));
-            createMaze(mazeMatrix, '355px', '195px');
+            createMaze(mazeMatrix, '355px', '195px', '-910px', '-660px');
         }
         else if (maze === '3') {
             const mazeMatrix = [
@@ -199,7 +200,7 @@ window.addEventListener('load', function() {
             mazeContainer.style.gridTemplateRows = 'repeat(15, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(10, 50px)';
             console.log(localStorage.getItem('currentLvl'));
-            createMaze(mazeMatrix, '5px', '245px');
+            createMaze(mazeMatrix, '5px', '245px', '-1340px', '-565px');
         }
         else if (maze === '4') {
             const mazeMatrix = [
@@ -222,7 +223,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(12, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(15, 50px)';
-            createMaze(mazeMatrix, '55px', '95px');
+            createMaze(mazeMatrix, '55px', '95px', '-1210px', '-835px');
         }
         else if (maze === '5') {
             const mazeMatrix = [
@@ -248,7 +249,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(15, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(20, 50px)';
-            createMaze(mazeMatrix, '305px', '45px');
+            createMaze(mazeMatrix, '305px', '45px', '-1040px', '-1010px');
         }
         else if (maze === '6') {
             const mazeMatrix = [
@@ -274,7 +275,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(15, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(15, 50px)';
-            createMaze(mazeMatrix, '655px', '95px');
+            createMaze(mazeMatrix, '655px', '95px', '-690px', '-840px');
         }
         else if (maze === '7') {
             const mazeMatrix = [
@@ -302,7 +303,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(17, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(19, 50px)';
-            createMaze(mazeMatrix, '55px', '145px');
+            createMaze(mazeMatrix, '55px', '145px', '-1330px', '-885px');
         }
         else if (maze === '8') {
             const mazeMatrix = [
@@ -330,7 +331,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(17, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(20, 50px)';
-            createMaze(mazeMatrix, '355px', '995px');
+            createMaze(mazeMatrix, '355px', '995px', '-1030px', '-65px');
         }
         else if (maze === '9') {
             const mazeMatrix = [
@@ -358,7 +359,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(17, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(22, 50px)';
-            createMaze(mazeMatrix, '5px', '595px');
+            createMaze(mazeMatrix, '5px', '595px', '-1385px', '-515px');
         }
         else if (maze === '10') {
             const mazeMatrix = [
@@ -386,7 +387,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(17, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(25, 50px)';
-            createMaze(mazeMatrix, '55px', '645px');
+            createMaze(mazeMatrix, '55px', '645px', '-1335px', '-535px');
         }
         else if (maze === '11') {
             const mazeMatrix = [
@@ -414,7 +415,7 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(13, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(23, 50px)';
-            createMaze(mazeMatrix, '155px', '645px');
+            createMaze(mazeMatrix, '155px', '645px', '-1240px', '-490px');
         }
         else if (maze === '12') {
             const mazeMatrix = [
@@ -435,7 +436,9 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(10, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(25, 50px)';
-            createMaze(mazeMatrix, '55px', '95px');
+
+            eyeless.style.width = '4000px';
+            createMaze(mazeMatrix, '55px', '95px', '-1670px', '-1580px');
         }
         else if (maze === '13') {
             const mazeMatrix = [
@@ -459,7 +462,9 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(13, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(27, 50px)';
-            createMaze(mazeMatrix, '55px', '95px');
+
+            eyeless.style.width = '4000px';
+            createMaze(mazeMatrix, '55px', '95px', '-1740px', '-1635px');
         }
         else if (maze === '14') {
             const mazeMatrix = [
@@ -484,7 +489,9 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(14, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(33, 50px)';
-            createMaze(mazeMatrix, '55px', '795px');
+            
+            eyeless.style.width = '4000px';
+            createMaze(mazeMatrix, '55px', '795px', '-1760px', '-1080px');
         }
         else if (maze === '15') {
             const mazeMatrix = [
@@ -511,7 +518,9 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(16, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(34, 50px)';
-            createMaze(mazeMatrix, '355px', '395px');
+            
+            eyeless.style.width = '4000px';
+            createMaze(mazeMatrix, '355px', '395px', '-1510px', '-1510px');
         }
         else if (maze === '16') {
             const mazeMatrix = [
@@ -539,7 +548,9 @@ window.addEventListener('load', function() {
             
             mazeContainer.style.gridTemplateRows = 'repeat(17, 50px)';
             mazeContainer.style.gridTemplateColumns = 'repeat(39, 50px)';
-            createMaze(mazeMatrix, '55px', '95px');
+            
+            eyeless.style.width = '4000px';
+            createMaze(mazeMatrix, '55px', '95px', '-1840px', '-1940px');
         }
     } catch (error) {
         console.log("Помилка виникла:", error.message);
@@ -611,7 +622,7 @@ function LockImage(){
     }
 }
 
-function createMaze(mazeMatrix, top, left) {
+function createMaze(mazeMatrix, top, left, top2, left2) {
     var player = document.getElementById('player');
     var eyeless = document.getElementById('eyeless');
     const mazeContainer = document.getElementById('maze');
@@ -637,20 +648,27 @@ function createMaze(mazeMatrix, top, left) {
 
     player.style.top = top;
     player.style.left = left;
+    eyeless.style.top = top2;
+    eyeless.style.left = left2;
 }
 
 //мій варіант + бот
 function movePlayer(keyCode) {
     var player = document.getElementById('player');
+    var eyeless = document.getElementById('eyeless');
     var mazeContainer = document.getElementById('maze');
     var currentTop = parseInt(player.style.top) || 0;
     var currentLeft = parseInt(player.style.left) || 0;
+    var eyelessTop = parseInt(eyeless.style.top) || 0;
+    var eyelessLeft = parseInt(eyeless.style.left) || 0;
     var matrix = JSON.parse(localStorage.getItem('mazeMatrix'));
     var mazeMatrix = matrix.matrix;
 
     var data = {
         currentTop: currentTop,
         currentLeft: currentLeft,
+        eyelessTop: eyelessTop,
+        eyelessLeft: eyelessLeft,
         mazeMatrix: mazeMatrix,
         mazeContainer: mazeContainer
     };
@@ -658,50 +676,66 @@ function movePlayer(keyCode) {
     switch(keyCode) {
         case "ArrowUp":
             data.currentTop -= 50;
+            data.eyelessTop -= 50;
             if (getCellClass(data) === 'cell road') {
                 if (player.classList != 'move-top') {
                     player.classList.add('move-top');
+                    eyeless.classList.add('move-top');
                 }
                 setTimeout( function () {
                     player.classList.remove('move-top');
+                    eyeless.classList.remove('move-top');
                     player.style.top = data.currentTop + 'px';
-                }, 49);
+                    eyeless.style.top = data.eyelessTop + 'px';
+                }, 100);
             }
             break;
         case "ArrowDown":
             data.currentTop += 50;
+            data.eyelessTop += 50;
             if (getCellClass(data) === 'cell road') {
                 if (player.classList != 'move-down') {
                     player.classList.add('move-down');
+                    eyeless.classList.add('move-down');
                 }
                 setTimeout( function () {
                     player.classList.remove('move-down');
+                    eyeless.classList.remove('move-down');
                     player.style.top = data.currentTop + 'px';
-                }, 49);
+                    eyeless.style.top = data.eyelessTop + 'px';
+                }, 100);
             }
             break;
         case "ArrowLeft":
             data.currentLeft -= 50;
+            data.eyelessLeft -= 50;
             if (getCellClass(data) === 'cell road') {
                 if (player.classList != 'move-left') {
                     player.classList.add('move-left');
+                    eyeless.classList.add('move-left');
                 }
                 setTimeout( function () {
                     player.classList.remove('move-left');
+                    eyeless.classList.remove('move-left');
                     player.style.left = data.currentLeft + 'px';
-                }, 49);
+                    eyeless.style.left = data.eyelessLeft + 'px';
+                }, 100);
             }
             break;
         case "ArrowRight":
             data.currentLeft += 50;
+            data.eyelessLeft += 50;
             if (getCellClass(data) === 'cell road') {
                 if (player.classList != 'move-right') {
                     player.classList.add('move-right');
+                    eyeless.classList.add('move-right');
                 }
                 setTimeout( function () {
                     player.classList.remove('move-right');
+                    eyeless.classList.remove('move-right');
                     player.style.left = data.currentLeft + 'px';
-                }, 49);
+                    eyeless.style.left = data.eyelessLeft + 'px';
+                }, 100);
             }
             break;
     }

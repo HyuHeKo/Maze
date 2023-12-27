@@ -285,7 +285,7 @@ footer{
 .modal-container {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -454,11 +454,24 @@ footer{
 #player{
 	width: 40px;
 	height: 40px;
-	background-image: url('../image/player.png');
+	background-image: url('../image/player.gif');
 	background-size: cover;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
+
+#eyeless{
+	width: 3000px;
+	height: 3000px;
+	background-image: url('../image/eyeless.png');
+	background-size: cover;
+	position: absolute;
+	z-index: 1;
+    /* top: -1210px;
+    left: 0px; */
+    /* transform: translate(-1500px, -1500px); */
+}
+
 .level-row-maze{
 	margin-left: -40px;
 }
@@ -476,6 +489,7 @@ footer{
 	border: 3px solid #1BADA5;
 	background: #0ECCC1;
 	margin-right: 20px;
+    z-index: 2;
 }
 
 .level-control-button:hover{
@@ -496,24 +510,29 @@ footer{
 	line-height: normal;
 }
 
+.keyboard{
+    z-index: 2;
+}
+
 .guide{
 	display: none;
+    z-index: 2;
 }
 
 .move-top{
-	animation: move-top 0.05s ease-in-out forwards;
+	animation: move-top 0.1s ease-in-out forwards;
 }
 
 .move-down{
-	animation: move-down 0.05s ease-in-out forwards;
+	animation: move-down 0.1s ease-in-out forwards;
 }
 
 .move-left{
-	animation: move-left 0.05s ease-in-out forwards;
+	animation: move-left 0.1s ease-in-out forwards;
 }
 
 .move-right{
-	animation: move-right 0.05s ease-in-out forwards;
+	animation: move-right 0.1s ease-in-out forwards;
 }
 
 @keyframes move-top {
