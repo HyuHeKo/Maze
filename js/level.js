@@ -147,7 +147,8 @@ window.addEventListener('load', function() {
             guide.style.marginTop = "-120px";
             guide.style.fontSize = "28px";
             guide.style.fontStyle = "normal";
-            guide.style.color = "#137a74"
+            guide.style.color = "#137a74";
+            guide.style.display = "block";
         }
         else if (maze === '2') {
             const mazeMatrix = [
@@ -528,8 +529,8 @@ window.addEventListener('load', function() {
                 [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
                 [1, 0, 1, 2, 2, 2, 0, 1, 2, 2, 0, 0, 0, 2, 2, 1, 2, 2, 2, 1, 2, 0, 1, 0, 2, 1, 2, 2, 2, 2, 0, 1, 2, 0, 1, 0, 1, 0, 1],
                 [1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 2, 2, 0, 1],
-                [1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 1, 0, 2, 2, 2, 1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 1, 2, 0, 0, 0, 1],
-                [1, 3, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1],
+                [1, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 1, 0, 2, 2, 2, 1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 0, 1, 2, 0, 0, 0, 1],
+                [1, 4, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1],
                 [1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
             ];
 
@@ -627,6 +628,8 @@ function createMaze(mazeMatrix, top, left) {
                 mazeCell.classList.add('wall-side');
             } else if ( cell === 3) {
                 mazeCell.classList.add('door');
+            } else if ( cell === 4) {
+                mazeCell.classList.add('crystal');
             }
             mazeContainer.appendChild(mazeCell);
         });
@@ -735,7 +738,7 @@ function getCellClass(data) {
     var cellElement = data.mazeContainer.children[index];
     console.log(localStorage.getItem('currentLvl'));
     console.log(localStorage.getItem(maze));
-    if (cellElement.classList.value === 'cell door') {
+    if (cellElement.classList.value === 'cell door' || cellElement.classList.value === 'cell crystal') {
         if (parseInt(maze) >= parseInt(localStorage.getItem('currentLvl'))) {
             localStorage.setItem('currentLvl' , String(parseInt(maze)+1));
         }

@@ -10,6 +10,10 @@ function redirectToLevelsPage() {
     window.location.href = "./pages/levels_page.html";
 }
 
+function redirectToAboutPage() {
+    window.location.href = "pages/about_page.html";
+}
+
 function changeStateMusic() {
     var audio = document.getElementById('background-music');
     var musicStat = document.querySelector('.music-text');

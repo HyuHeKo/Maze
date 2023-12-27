@@ -151,6 +151,16 @@ footer{
 	background-color: #0eccc1;
 }
 
+.about-button-back:hover{
+	transform: translateY(-8px);
+	background-color: #0ae2d5;
+}
+
+.about-button-back:hover:active{
+	transform: translateY(8px);
+	background-color: #0eccc1;
+}
+
 .menu-button-text{
 	color: #BFEBEC;
 	font-size: 40px;
@@ -338,6 +348,67 @@ footer{
 	line-height: normal;
 }
 
+.about{
+	display: flex;
+	flex-direction: column;
+}
+
+.about-row{
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+}
+
+.about-column{
+	display: flex;
+	flex-direction: column;
+}
+
+.about-row-text{
+	display: flex;
+	flex-direction: row;
+}
+
+.about-column-text{
+	display: flex;
+	flex-direction: column;
+}
+
+.about-text{
+	color: #bfebec;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	text-align: justify;
+	margin: 15px;
+}
+
+.about-button-back{
+	width: 150px;
+	height: 50px;
+	border: 3px solid #1BADA5;
+	background: #0ECCC1;
+	margin-top: 30px;
+}
+
+.about-text-back{
+	color: #FFF;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.window-about{
+	display: flex;
+	flex-direction: column;
+	width: 1000px;
+	height: 780px;
+	border-radius: 15px;
+	border: 5px solid #1BADA5;
+	background: rgba(0, 0, 0, 0.41);
+}
+
 /*Лабіринт*/
 .maze {
 	display: grid;
@@ -364,6 +435,12 @@ footer{
 
 .door {
 	background-image: url('../image/door.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.crystal {
+	background-image: url('../image/crystal.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -417,6 +494,10 @@ footer{
 	font-style: normal;
 	font-weight: 900;
 	line-height: normal;
+}
+
+.guide{
+	display: none;
 }
 
 .move-top{
