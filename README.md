@@ -1,1 +1,1 @@
-# Maze/index.html
+# https://hyuheko.github.io/Maze/
